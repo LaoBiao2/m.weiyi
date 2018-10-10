@@ -1,0 +1,144 @@
+body {
+    background-color: #151419;
+}
+
+.gradualChangeBg {
+    background:#bc3326;
+    background:-moz-linear-gradient(left, #bc3326, #df4425);  
+    background:-webkit-gradient(linear,left 0, right 0, from(#bc3326), to(#df4425));  
+    background:-o-linear-gradient(left, #bc3326, #df4425);
+}
+
+/* banner */
+
+.banner {
+    width: 100%;
+    height: 5.3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.banner .txt {
+    text-align: center;
+}
+.banner .txt h3 {
+    font-size: .36rem;
+    color: #fff;
+    line-height: .64rem;
+    font-weight: bold;
+    display: inline-block;
+}
+.banner .txt h3 i {
+    width: .3rem;
+    height: .22rem;
+    display: inline-block;
+}
+.banner .txt h3 i.left-i {
+    background: url(/images/about/why_icon.png) -36.1rem -1.54rem no-repeat;
+    background-size: 36.4rem 4.39rem;
+    margin-right: .23rem;
+    vertical-align: text-top;
+}
+.banner .txt h3 i.right-i {
+    background: url(/images/about/why_icon.png) -36.1rem -2.64rem no-repeat;
+    background-size: 36.4rem 4.39rem;
+    margin-left: .23rem;
+    vertical-align: text-bottom;
+}
+.banner .txt p {
+    width: 4.5rem;
+    font-size: .28rem;
+    color: #efefef;
+    line-height: .5rem;
+    margin-top: .4rem;
+}
+
+.box {
+    width: 6.92rem;
+    margin: 0 auto;
+    display: block;
+    padding: 0 .15rem;
+    box-sizing: border-box;
+    padding-top: .86rem;
+}
+.box span {
+    font-size: .42rem;
+    color: #de4425;
+    display: block;
+    margin-bottom: .48rem;
+}
+.box p {
+    font-size: .26rem;
+    color: #fff;
+    line-height: .46rem;
+}
+.box i {
+    width: 3.52rem;
+    height: 4.39rem;
+    display: block;
+    margin: .28rem auto 0;
+    background: url(/images/about/why_icon.png) 0 0 no-repeat;
+    background-size: 36.4rem 4.39rem;
+}
+.box.b2 i {
+    width: 4.88rem;
+    background-position-x: -6.81rem;
+}
+.box.b3 i {
+    width: 5.86rem;
+    background-position-x: -13.81rem;
+}
+.box.b4 i {
+    width: 4.78rem;
+    background-position-x: -21.83rem;
+}
+.box.b5 i {
+    width: 5.88rem;
+    background-position-x: -28.77rem;
+}
+
+.b6 {
+    margin-top: .87rem;
+    height: 2.6rem;
+    background: url(/images/about/b6_bg.jpg) no-repeat center;
+    background-size: contain;
+    padding: .33rem 0 .57rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+.b6 span {
+    font-size: .3rem;
+    color: #fff;
+    margin-bottom: .7rem;
+    display: block;
+}
+
+.b6 a {
+    width: 2rem;
+    height: .7rem;
+    border-radius: .04rem;
+    -webkit-border-radius: .04rem;
+    -moz-border-radius: .04rem;
+    -ms-border-radius: .04rem;
+    -o-border-radius: .04rem;
+    border: 1px solid #fff;
+    font-size: .26rem;
+    line-height: .7rem;
+    display: inline-block;
+}
+.b6 a.download-a {
+    color: #fff;
+}
+.b6 a.register-a {
+    color: #191818;
+    background-color: #fff;
+    margin-left: .56rem;
+}

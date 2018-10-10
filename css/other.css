@@ -1,0 +1,265 @@
+body {
+    background: #1d1d1d;;
+    background:-moz-linear-gradient(top, #1d1d1d, #27262c);  
+    background:-webkit-gradient(linear,left top, left bottom, from(#1d1d1d), to(#27262c));  
+    background:-o-linear-gradient(top, #1d1d1d, #27262c);
+}
+/* login */
+.login {
+    width: 100%;
+    height: 100%;
+    background: url(../images/other/login_bg.jpg) no-repeat center;
+    background-size: cover;
+    text-align: center;
+    padding-top: 2.08rem;
+    box-sizing: border-box;
+    margin: 0;
+    position: fixed;
+}
+.login a.logo {
+    width: 2.33rem;
+    height: .82rem;
+    display: block;
+    margin: 0 auto .75rem;
+    /* background: url(../images/header_logo.png) no-repeat center; */
+    background: #fff;
+    background-size: cover;
+}
+.login .login-box {
+    background-color: #f5f5f5;
+    display: block;
+    margin: 0 auto;
+    padding: .62rem .72rem .82rem;
+    border-radius: .12rem;
+    -webkit-border-radius: .12rem;
+    -moz-border-radius: .12rem;
+    -ms-border-radius: .12rem;
+    -o-border-radius: .12rem;
+    box-sizing: border-box;
+}
+.login .login-box h4 {
+    font-size: .32rem;
+    color: #151515;
+    font-weight: bold;
+    margin-bottom: .46rem;
+}
+.login .login-box .input-box {
+    width: 5.4rem;
+    height: .72rem;
+    /*overflow: hidden;
+    */display: block;
+    position: relative;
+    margin: 0 auto .4rem;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: .04rem;
+    -webkit-border-radius: .04rem;
+    -moz-border-radius: .04rem;
+    -ms-border-radius: .04rem;
+    -o-border-radius: .04rem;
+}
+.login .login-box .input-box.password-input {
+    margin-bottom: 0;
+}
+.login .login-box .input-box input {
+    width: 5.4rem;
+    height: .72rem;
+    background-color: transparent;
+    border: none;
+    padding-left: .28rem;
+    box-sizing: border-box;
+    color: #333;
+    font-size: .28rem;
+}
+.login .login-box .login-btn {
+    width: 5.4rem;
+    height: .72rem;
+    margin: .61rem auto 0;
+    display: block;
+    background: #d73f23;
+    font-size: .28rem;
+    color: #fff;
+    line-height: .72rem;
+    border-radius: .04rem;
+    -webkit-border-radius: .04rem;
+    -moz-border-radius: .04rem;
+    -ms-border-radius: .04rem;
+    -o-border-radius: .04rem;
+}
+.login span.link {
+    font-size: .28rem;
+    color: #fff;
+    display: block;
+    margin: .68rem auto 0;
+}
+.login span.link a {
+    color: #d73f23;
+}
+
+/* register */
+.register {
+    height: 100%;
+    text-align: center;
+    padding-top: .58rem;
+    box-sizing: border-box;
+}
+.register .register-box {
+    background-color: #fff;
+    padding-bottom: .51rem;
+    display: block;
+    border-radius: .12rem;
+    -webkit-border-radius: .12rem;
+    -moz-border-radius: .12rem;
+    -ms-border-radius: .12rem;
+    -o-border-radius: .12rem;
+}
+.register .register-box h4 {
+    width: 5.76rem;
+    margin: 0 auto;
+    font-size: .32rem;
+    font-weight: bold;
+    color: #151515;
+    line-height: 1.1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+.register .register-box .register-content {
+    padding: .43rem .53rem 0 0;
+    box-sizing: border-box;
+}
+.register .register-box .input-box {
+    width: 100%;
+    height: .72rem;
+    /* overflow: hidden; */
+    display: block;
+    margin-bottom: .5rem;
+    position: relative;
+}
+.register .register-box .input-box.code {
+    margin-bottom: .43rem;
+}
+.register .register-box .input-box span.span-title {
+    width: 1.51rem;
+    height: .72rem;
+    line-height: .72rem;
+    /* display: inline-block; */
+    font-size: .28rem;
+    color: #151515;
+    text-align: right;
+    padding-right: .3rem;
+    box-sizing: border-box;
+    float: left;
+}
+.register .register-box .input-box span b {
+    color: #e94a2b;
+    vertical-align: -.04rem;
+    margin-right: .03rem;
+}
+.register .register-box .input-box select,
+.register .register-box .input-box .area,
+.register .register-box .input-box input {
+    width: 4.86rem;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #b4b9bd;
+    padding-left: .21rem;
+    box-sizing: border-box;
+    color: #999;
+    font-size: .28rem;
+    float: left;
+}
+.register .register-box .input-box select,
+.register .register-box .input-box .area {
+    width: 2.94rem;
+    background-color: #f5f5f5;
+    border-color: #b4b9bd;
+}
+.register .register-box .input-box .area {
+    width: 1.59rem;
+    line-height: .72rem;
+    margin: 0 0 0 .33rem;
+    text-align: left;
+}
+.register .register-box .input-box.code input {
+    width: 2.95rem;
+}
+.register .register-box .input-box.code a {
+    width: 1.59rem;
+    height: .68rem;
+    line-height: .68rem;
+    font-size: .26rem;
+    color: #df4425;
+    border: 1px solid #df4425;
+    float: right;
+}
+.input-box span.error {
+    display: none;
+    position: absolute;
+    bottom: -.48rem;
+    /* left: 94px; */
+    left: 1.52rem;
+    line-height: .48rem;
+    font-size: .24rem;
+    color: #df4425;
+}
+.login .input-box span.error {
+    left: .28rem;
+}
+.input-box.warning span.error {
+    display: block;
+}
+.register .register-box .input-box.agreement {
+    height: .24rem;
+    line-height: .24rem;
+}
+.register .register-box .input-box.agreement span {
+    height: 100%;
+    float: left;
+}
+.register .register-box .input-box.agreement input {
+    width: .01rem;
+    border-color: #d9d9d9;
+    padding: 0;
+    visibility: hidden;
+}
+.register .register-box .input-box.agreement .agreement-span {
+    width: max-content;
+    font-size: .24rem;
+    color: #878787;
+    /* margin-right: .2rem; */
+    line-height: .24rem;
+}
+.register .register-box .input-box.agreement a {
+    color: #3182dd;
+    font-size: .24rem;
+    float: left;
+}
+.register .register-box .input-box.agreement .agreement-span::before {
+    content: ' ';
+    width: .22rem;
+    height: .22rem;
+    border: 1px solid #d9d9d9;
+    float: left;
+    margin-right: .1rem;
+    cursor: pointer;
+    color: #df4425;
+    font-size: .24rem;
+    line-height: 1;
+}
+.register .register-box .input-box.agreement .agreement-span.active::before {
+    content: '\2714';
+}
+.register .register-box .register-btn {
+    width: 4.07rem;
+    height: .74rem;
+    margin: .53rem auto 0;
+    display: block;
+    background: #d73f23;
+    font-size: .28rem;
+    color: #fff;
+    line-height: .74rem;
+    border-radius: .1rem;
+    -webkit-border-radius: .1rem;
+    -moz-border-radius: .1rem;
+    -ms-border-radius: .1rem;
+    -o-border-radius: .1rem;
+}

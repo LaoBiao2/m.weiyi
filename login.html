@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="telephone=no" name="format-detection" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/other.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script><script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        function size() {
+            var width = $(window).width();
+            if (width > 750) {
+                $('html').css('font-size', function () {
+                    return 100;
+                });
+                return;
+            } else {
+                $('html').css('font-size', function () {
+                    return 100 * width / 750;
+                });
+            }
+        }
+        size();
+        $(window).resize(function () {
+            size();
+        });
+    </script>
+</head>
+
+<body>
+    <!-- <div id="header"></div> -->
+    <div class="login">
+        <a href="javascript:;" class="logo"></a>
+        <div class="login-box content">
+            <h4>登录用户中心</h4>
+            <div class="input-box username-input">
+                <input type="text" placeholder="账户">
+                <span class="error"><b>*</b><span></span></span>
+            </div>
+            <div class="input-box password-input">
+                <input type="password" placeholder="密码">
+                <span class="error"><b>*</b><span></span></span>
+            </div>
+            <a href="javascript:;" class="login-btn">登录</a>
+        </div>
+        <span class="link">还没有账户？<a href="javascript:;">马上注册</a></span>
+    </div>
+    <script>
+        $("#header").load("./common/header.html")
+
+        $(document).ready(function () {
+            // 账户判断
+            $(".input-box.username-input input").on('blur input propertychange',function () {
+                if ($(this).val() == '') {
+                    $(this).parent().addClass("warning");
+                    $(this).parent().find("span.error span").text("账户不能为空");
+                    return false;
+                } else {
+                    $(this).parent().removeClass("warning");
+                    $(this).parent().find("span.error span").text("");
+                    return true;
+                }
+            })
+            // 密码判断
+            $(".input-box.password-input input").on('blur input propertychange',function () {
+                if ($(this).val() == '') {
+                    $(this).parent().addClass("warning");
+                    $(this).parent().find("span.error span").text("密码不能为空");
+                    return false;
+                } else {
+                    $(this).parent().removeClass("warning");
+                    $(this).parent().find("span.error span").text("");
+                    return true;
+                }
+            })
+
+            $(".login-btn").click(checkAll);
+            function checkAll() {
+                $(".input-box input").trigger("blur");
+                if($(".input-box").hasClass("warning")) {
+                    alert("请确认表单信息");
+                    return false;
+                } else {
+                    alert("success");
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
