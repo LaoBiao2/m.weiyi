@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/mt4.css" />
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        function size() {
+            var width = $(window).width();
+            if (width > 750) {
+                $('html').css('font-size', function () {
+                    return 100;
+                });
+                return;
+            } else {
+                $('html').css('font-size', function () {
+                    return 100 * width / 750;
+                });
+            }
+        }
+        size();
+        $(window).resize(function () {
+            size();
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="mt4">
+            <h4>下载 DOWNLOAD</h4>
+            <p>MetaTrade 4 移动设备</p>
+            <div class="type">
+                <div class="box android">
+                    <div class="btn">
+                        <a href="" class="download"></a>
+                        <a href="" class="guide">
+                            Android操作指南<i></i>
+                        </a>
+                    </div>
+                    <img src="images/mt4/android.png" alt="">
+                </div>    
+                <div class="box ios">
+                    <div class="btn">
+                        <a href="" class="download"></a>
+                        <a href="" class="guide">
+                            iOS操作指南<i></i>
+                        </a>
+                    </div>
+                    <img src="images/mt4/ios.png" alt="">
+                </div>                
+            </div>
+            <div class="server">
+                <span>真实：FXGoldenGrand-Live</span>
+                <span>体验：FXGoldenGrand-Demo</span>
+            </div>
+        </div>
+        <script>           
+            var u = navigator.userAgent;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1 ||u.indexOf('Windows') > -1; //android终端
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            if(isAndroid){
+                $(".type .android").show()
+            }
+            if(isiOS){
+                $(".type .ios").show()
+            }
+        </script>
+    </div>
+</body>
+</html>

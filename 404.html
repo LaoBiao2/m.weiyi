@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" href="css/404.css">
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        function size() {
+            var width = $(window).width();
+            if (width > 750) {
+                $('html').css('font-size', function () {
+                    return 100;
+                });
+                return;
+            } else {
+                $('html').css('font-size', function () {
+                    return 100 * width / 750;
+                });
+            }
+        }
+        size();
+        $(window).resize(function () {
+            size();
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="err">
+            <img src="images/other/404.png" alt="">
+            <p>您查找的页面不存在</p>
+            <a href=""><span>10</span>秒后返回首页</a>
+        </div>
+    </div>
+    <script>
+        var tim = 10;
+        var goback = setInterval(function(){
+            --tim;
+            $(".err a span").text(tim);
+            if(tim<=0){
+                clearInterval(goback)
+                // window.location.href="/";
+            }
+        },1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/aboutus.css" />
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript">
+        function size() {
+            var width = $(window).width();
+            if (width > 750) {
+                $('html').css('font-size', function () {
+                    return 100;
+                });
+                return;
+            } else {
+                $('html').css('font-size', function () {
+                    return 100 * width / 750;
+                });
+            }
+        }
+        size();
+        $(window).resize(function () {
+            size();
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <img src="./images/aboutus/banner.jpg" alt="">
+            <div class="txt content">
+                <h3><i class="left-i"></i>我们让每个人都能交易<i class="right-i"></i></h3>
+            </div>
+        </div>
+        <div class="aboutus">
+            <img src="images/aboutus/about.jpg" alt="">
+            <div class="txt">
+                <h4><i></i>关于我们</h4>
+                <p>VEFX旨在为客户创造100%透明的数字交易体验。</p>
+                <p>我们提供易于使用的交易平台，并花费大量时间为<br>
+                        我们的客户提供学习资料。</p>
+                <p>我们公司关注成功且兴盛的交易用户，他们创造高<br>交易量。
+                    能帮助众多客户赚到钱，我们感到很自豪。</p>
+            </div>            
+        </div>
+        <div class="value">
+            <h4><i></i>我们的价值</h4>
+            <div class="box">
+                <div class="item clearfix">               
+                    <div class="fl">
+                        <span>01</span>
+                    </div>
+                    <div class="txt">
+                            客户：提供最好的客服是我们的主要价值。我们有100 多名客户经理专注于客户的需求。
+                    </div>
+                </div>
+                <div class="item clearfix">
+                    <div class="fl">
+                        <span>02</span>
+                    </div>
+                    <div class="txt">
+                        可靠：作为行业领军人，我们为客户提供了额外雄厚的实力。我们比任何人都做得更多，力求满足客户的需求。
+                    </div>
+                </div>
+                <div class="item clearfix">                    
+                    <div class="fl">
+                        <span>03</span>
+                    </div>
+                    <div class="txt">
+                        简单：每个人都可以通过我们最简单的交易平台成为交易用户。VEFX可在所有的现代平台上使用：Windows、MacOS、iPhone和安卓。
+                    </div>
+                </div>
+                <div class="item clearfix">         
+                    <div class="fl">
+                        <span>04</span>
+                    </div>
+                    <div class="txt">
+                        速度：我们使用先进的技术提供最快速的交易。用户界面中的订单执行没有延迟或滞后。
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="safety">
+            <div class="item clearfix">
+                <i class="si1"></i>
+                <div class="txt">
+                    <h4>新西兰FSP监管</h4>
+                    <p>我们公司由新西兰<br>FinancialServiceProviders授权和监管</p>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <i class="si2"></i>
+                <div class="txt">
+                    <h4>美国NFA监管</h4>
+                    <p>我们的活动由FMRRC组织批准和监督</p>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <i class="si3"></i>
+                <div class="txt">
+                    <h4>安全标准</h4>
+                    <p>经维萨和万事达卡验证<br>
+                        所有数据都使用最强密码算法进行加密</p>
+                </div>
+            </div>
+            <div class="item clearfix">
+                <i class="si4"></i>
+                <div class="txt">
+                    <h4>报价精确</h4>
+                    <p>主要分析机构提供的实时市场数据</p>
+                </div>
+            </div>
+        </div>
+        <div class="course">
+            <div class="item">
+                <h4><i></i>850.100+</h4>
+                <p>已注册的VEFX用户账号数量近百万</p>
+            </div>
+            <div class="item">
+                <h4><i></i>2010 年</h4>
+                <p>我们开始为客户提供服务的时间 </p>
+            </div>
+            <div class="item">
+                <h4><i></i>113 地区</h4>
+                <p>影响力覆盖全球113个国家和地区</p>
+            </div>
+            <div class="item">
+                <h4><i></i>10.500.350+</h4>
+                <p>海量分析策略人群覆盖阅读量超千万</p>
+            </div>
+            <div class="item">
+                <h4><i></i>3.000.000+</h4>
+                <p>我们开始为客户提供服务的时间</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

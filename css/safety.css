@@ -1,0 +1,199 @@
+body{
+    background: #1c1b1f;
+}
+.banner {
+    width: 100%;
+    height: 5.3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.banner .txt {
+    text-align: center;
+}
+.banner .txt h3 {
+    font-size: .36rem;
+    color: #fff;
+    line-height: .64rem;
+    font-weight: bold;
+    display: inline-block;
+}
+.banner .txt h3 i {
+    width: .3rem;
+    height: .22rem;
+    display: inline-block;
+}
+.banner .txt h3 i.left-i {
+    background: url(/images/about/why_icon.png) -36.1rem -1.54rem no-repeat;
+    background-size: 36.4rem 4.39rem;
+    margin-right: .23rem;
+    vertical-align: text-top;
+}
+.banner .txt h3 i.right-i {
+    background: url(/images/about/why_icon.png) -36.1rem -2.64rem no-repeat;
+    background-size: 36.4rem 4.39rem;
+    margin-left: .23rem;
+    vertical-align: text-bottom;
+}
+.banner .txt p {
+    width: 4.5rem;
+    font-size: .28rem;
+    color: #efefef;
+    line-height: .5rem;
+    margin-top: .4rem;
+}
+.approve{   
+    padding: 0.6rem 0 0.55rem 0;
+    background: #1c1b1f;
+}
+.approve .box .swiper-slide{
+    box-sizing: border-box;
+    padding: 0 0.5rem 0.7rem 0.5rem;
+}
+.approve h4{
+    text-align: center;
+    font-size: 0.36rem;
+    color: #ffffff;
+    margin-bottom: 0.65rem;
+}
+.approve .swiper-slide img{
+    display: block;
+    width: 4.85rem;
+    height: 2.88rem;
+    margin: 0 auto;
+}
+.approve .swiper-slide h5{
+    font-size: 0.28rem;
+    color: #4395e9;
+    text-align: center;
+    margin: 0.38rem 0 0.37rem 0;
+}
+.approve .swiper-slide p{
+    font-size: 0.28rem;
+    color: #f4f4f4;
+    line-height: 0.4rem;
+}
+.approve .swiper-container-horizontal>.swiper-pagination-bullets{
+    bottom: 0;
+}
+.approve .swiper-pagination-bullet{
+    width: 0.5rem;
+    height: 0.04rem;
+    display: inline-block;
+    background: #bfbfbf;
+    border-radius: 0;
+    opacity:1;
+}
+.approve .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+    margin: 0 0.12rem;
+}
+.approve .swiper-pagination-bullet-active{
+    background: #d03d25;
+}
+
+.advantage{
+
+}
+.advantage .item{
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: 2rem;
+    margin-bottom: 0.12rem;
+    padding: 0.4rem 0.7rem 0 0.7rem;
+    transition: all .3s;
+    overflow: hidden;
+}
+.advantage .item img{
+    position: absolute;
+    width: 100%;
+    height: 5.3rem;
+    left: 0;
+    top: 0;
+
+}
+.advantage .item .con{
+    position: relative;
+    z-index: 1;
+}
+.advantage .item h4{
+    font-size: 0.3rem;
+    color: #ffffff;
+}
+.advantage .item i{
+    position: absolute;
+    right: 0.75rem;
+    top: 0.66rem;
+    display: block;
+    width: 0.38rem;
+    height: 0.22rem;
+    background: url(../images/safety/triangle_icon.png) no-repeat center;
+    background-size:cover; 
+    transition: all .3s;
+    z-index: 1;
+}
+.advantage .item h5{
+    font-size: 0.26rem;
+    color: #f5f5f5;
+    margin: 0.5rem 0 0.47rem 0;
+}
+.advantage .item p{
+    font-size: 0.26rem;
+    color: #dcdcdc;
+    line-height: 0.36rem;
+    margin-bottom: 0.4rem;
+}
+.advantage .item .txt{
+    display: none;
+}
+.advantage .active{
+    height: 5.3rem;
+}
+.advantage .active i{
+    transform: rotate(180deg)
+}
+.next{
+    width: 100%;
+    height: 2.3rem;
+    padding-top: 0.3rem;
+    margin-top: 0.55rem;
+    background: url(../images/safety/nextbg.jpg) no-repeat;
+    background-size:cover; 
+}
+.next h4{
+    font-size: 0.3rem;
+    text-align: center;
+    color: #ffffff;
+}
+.next .btn{
+    font-size: 0;
+    margin-top: 0.7rem;
+    text-align: center;
+}
+.next .btn a{
+    display: inline-block;
+    width: 2rem;
+    height: 0.7rem;
+    font-size: 0.26rem;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 0.04rem;
+    line-height: 0.7rem;
+    border: 1px solid transparent;
+    margin: 0 0.13rem;
+}
+.next .btn .mt4_btn{
+    border-color: #ffffff;
+}
+.next .btn .register_btn{
+    color: #333333;
+    background: #ffffff;
+}

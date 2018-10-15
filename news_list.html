@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/market.css" />
+    <script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        function size() {
+            var width = $(window).width();
+            if (width > 750) {
+                $('html').css('font-size', function () {
+                    return 100;
+                });
+                return;
+            } else {
+                $('html').css('font-size', function () {
+                    return 100 * width / 750;
+                });
+            }
+        }
+        size();
+        $(window).resize(function () {
+            size();
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a href="javascript:;" class="swiper-slide on">
+                        最新
+                    </a>
+                    <a href="javascript:;" class="swiper-slide">
+                        专家点评
+                    </a>
+                    <a href="javascript:;" class="swiper-slide">
+                        经济数据
+                    </a>
+                    <a href="javascript:;" class="swiper-slide">
+                        投行观点
+                    </a>
+                    <a href="javascript:;" class="swiper-slide">
+                        时事热点
+                    </a>
+                </div>
+            </div>
+            <script>                   
+                var navSwiper = new Swiper('.nav .swiper-container', {
+                    slidesPerView : 'auto',
+                    loopedSlides :5,
+                    initialSlide:0
+                });
+                $(".swiper-slide").click(function(){
+                    var index = $(this).index();
+                    navSwiper.slideTo(index, 500, false);
+                    $(this).addClass("on").siblings().removeClass("on");
+                });        
+            </script>
+        </div>
+        <div class="list">
+            <a href="" class="sift">
+                <img src="images/market/market1.jpg" alt="">
+                <div class="txt">
+                    非农惊艳“特金会”起死回生黄金前景堪忧沙特俄
+                </div>
+            </a>
+            <a href="" class="item clearfix">
+                <div class="img">
+                    <img src="images/market/market2.jpg" alt="">
+                </div>
+                <div class="txt">
+                    <h4>美银美林：6月三大金融风险不
+                            得不防 美联储加息面临一大...</h4>
+                    <div class="attribute clearfix">
+                        <span class="fl">行情分析</span>
+                        <span class="fr">2018-06-04</span>
+                    </div>
+                </div>
+            </a>
+            <a href="" class="item clearfix">
+                <div class="img">
+                    <img src="images/market/market2.jpg" alt="">
+                </div>
+                <div class="txt">
+                    <h4>美银美林：6月三大金融风险不
+                            得不防 美联储加息面临一大...</h4>
+                    <div class="attribute clearfix">
+                        <span class="fl">行情分析</span>
+                        <span class="fr">2018-06-04</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>            
+        //文章类型
+        var nav_type = "";
+        //关键字
+        var kw = "";
+        var page = 1;
+        var footHeight = $(".footer").outerHeight(true);
+        $('.news_list').dropload({
+            scrollArea : window,
+            domDown: {
+                domClass   : 'loading',
+                domRefresh : '<p class="dropload-refresh">↓下拉刷新</p>',
+                domUpdate  : '<p class="dropload-update">↑释放更新</p>',
+                domLoad    : '<span></span><span></span><span></span><span></span><span></span>'
+            },
+            loadDownFn : function (me) {
+                page++;
+                ajaxCon(me,page,nav_type)
+            },
+            threshold : footHeight
+
+        });
+        function  ajaxCon(me,page,nav_type) {
+            //拼接Html
+            $.ajax({
+                type : 'get',
+                url : '/market/'+nav_type+'?page=' + page + '&text=' + kw,
+                dataType:'json',
+                success:function (data) {
+                    //console.log(data[0]['count']);
+                    var arrLen = data.length;
+                    var page_count = data[0]['count'];
+                    //console.log(page_count)
+                    //console.log(page)
+                    if(page <= page_count ){
+                        var result = '';
+                        for(var i=0; i<arrLen; i++){
+                            result +='<a href="" class="item clearfix">';
+                            result +='<div class="img">';
+                            result +='<img src="images/market/market2.jpg" alt="">';
+                            result +='</div>';
+                            result +='<div class="txt">';
+                            result +='<h4>美银美林：6月三大金融风险不得不防 美联储加息面临一大...</h4>';
+                            result += '<div class="attribute clearfix">';
+                            result +=  '<span class="fl">行情分析</span>';
+                            result += '<span class="fr">2018-06-04</span>';
+                            result += '</div>';
+                            result +='</div>';
+                            result +='</a>';
+                        }
+                    }else{
+                        // 锁定
+                        me.lock();
+                        // 无数据
+                        me.noData();
+                    }
+                    //为了测试，延迟1秒加载
+                    setTimeout(function(){
+                        // 插入数据到页面，放到最后面
+                        $('.news_list .box').append(result);
+                        //简繁体切换
+                        translateInitilization();
+                        // 每次数据插入，必须重置
+                        me.resetload();
+                    },1000);
+                },
+                error: function(xhr, type){
+                    //alert('Ajax error!');
+                    // 即使加载出错，也得重置
+                    me.resetload();
+                }
+            });
+
+        }
+
+    </script>
+</body>
+</html>

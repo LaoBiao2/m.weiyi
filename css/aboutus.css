@@ -1,0 +1,207 @@
+.banner {
+    width: 100%;
+    height: 5.3rem;
+    position: relative;
+    display: flex;
+}
+.banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+.banner .txt {
+    text-align: center;
+}
+.banner .txt h3 {
+    padding-top: 1.33rem;
+    font-size: .36rem;
+    color: #fff;
+    line-height: .64rem;
+    font-weight: bold;
+    display: inline-block;
+}
+.banner .txt h3 i {
+    width: .3rem;
+    height: .22rem;
+    display: inline-block;
+}
+.banner .txt h3 i.left-i {
+    background: url(/images/about/why_icon.png) -36.1rem -1.54rem no-repeat;
+    background-size: 36.4rem 4.39rem;
+    margin-right: .23rem;
+    vertical-align: text-top;
+}
+.banner .txt h3 i.right-i {
+    background: url(/images/about/why_icon.png) -36.1rem -2.64rem no-repeat;
+    background-size: 36.4rem 4.39rem;
+    margin-left: .23rem;
+    vertical-align: text-bottom;
+}
+.banner .txt p {
+    width: 4.5rem;
+    font-size: .28rem;
+    color: #efefef;
+    line-height: .5rem;
+    margin-top: .4rem;
+}
+.aboutus{
+    position: relative;
+    background: #252429;
+    padding: 3.45rem 0 0.25rem 0.65rem;
+}
+.aboutus img{
+    display:block;
+    position: absolute;
+    left: 50%;
+    top: -1.25rem;
+    margin-left: -3.2rem;
+    width: 6.4rem;
+    height: 4.04rem;
+    border-radius: 4px;
+}
+.aboutus h4{
+    font-size: 0.36rem;
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+}
+.aboutus h4 i{
+    display: inline-block;
+    width: 0.35rem;
+    height: 0.35rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    background: url(../images/aboutus/aboutus_icon.png) no-repeat 0 0;
+    background-size: 3rem 2rem;
+}
+.aboutus .txt p{
+    font-size: 0.28rem;
+    color: #f5f5f5;
+    line-height: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+.value {
+    background: #2b2a2f;
+    padding: 0.4rem 0 0.1rem 0.73rem;
+}
+.value h4{
+    font-size: 0.36rem;
+    color: #ffffff;
+    margin-bottom: 0.7rem;
+}
+.value h4 i{
+    display: inline-block;
+    width: 0.45rem;
+    height: 0.35rem;
+    margin-right: 0.35rem;
+    vertical-align: middle;
+    background: url(../images/aboutus/aboutus_icon.png) no-repeat -0.67rem 0;
+    background-size: 3rem 2rem;
+}
+.value .item{
+    margin-bottom: 0.3rem;
+}
+.value .item span{
+    position: relative;
+    font-size: 0.4rem;
+    color: #f5f5f5;
+    font-style: italic;   
+    z-index: 2;
+}
+.value .item .fl{
+    float: left;
+    position: relative;
+    margin: 0 0.45rem 0 0.03rem;
+}
+.value .item .fl::after{
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    margin-left: -0.3rem;
+    margin-top: -0.02rem;
+    width: 0.6rem;
+    height: 0.05rem;
+    background: rgba(124,54,42,0.45);
+    z-index: 1;
+}
+.value .item .txt{
+    float: left;
+    width: 5.15rem;
+    font-size: 0.28rem;
+    color: #f5f5f5;
+    line-height: 0.48rem;
+}
+.safety{
+    background: #1c1b1f;
+    padding: 0.55rem 0 0.2rem 0.85rem; 
+}
+.safety .item{
+    margin-bottom: 0.6rem;
+}
+.safety .item i{
+    float: left;
+    width: 0.45rem;
+    height: 0.47rem;
+    margin-right: 0.3rem;
+    background: url(../images/aboutus/aboutus_icon.png) no-repeat ;
+    background-size:3rem 2rem; 
+}
+.safety .item .si1{
+    background-position:0 -0.77rem; 
+}
+.safety .item .si2{
+    background-position:-0.67rem -0.77rem; 
+}
+.safety .item .si3{
+    background-position:-1.32rem -0.77rem; 
+}
+.safety .item .si4{
+    background-position:-1.97rem -0.77rem; 
+}
+.safety .item .txt{
+    float: left;
+    width: 5.2rem;
+}
+.safety .item h4{
+    font-size: 0.32rem;
+    color: #f5f5f5;
+    font-style: italic;
+    margin-bottom: 0.2rem;
+}
+.safety .item p{
+    font-size: 0.26rem;
+    color: #f5f5f5;
+    line-height: 0.46rem;
+}
+
+.course{
+    width: 100%;
+    height: 7.63rem;
+    box-sizing: border-box;
+    padding: 0.5rem 0 0 0.8rem;
+    background: url(../images/aboutus/course.jpg) no-repeat;
+    background-size:cover; 
+}
+.course .item{
+    margin-bottom: 0.55rem;
+}
+.course .item h4{
+    font-size: 0.38rem;
+    color: #ffffff;
+    font-style: italic;
+    margin-bottom: 0.25rem;
+}
+.course .item h4 i{
+    display: inline-block;
+    width: 0.49rem;
+    height: 0.26rem;
+    background: url(../images/aboutus/aboutus_icon.png) no-repeat 0 -1.6rem;
+    background-size:3rem 2rem; 
+}
+.course .item p{
+    font-size: 0.26rem;
+    color: #f5f5f5;
+}
