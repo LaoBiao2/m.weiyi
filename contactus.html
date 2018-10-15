@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="telephone=no" name="format-detection" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/about.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script><script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        function size() {
+            var width = $(window).width();
+            if (width > 750) {
+                $('html').css('font-size', function () {
+                    return 100;
+                });
+                return;
+            } else {
+                $('html').css('font-size', function () {
+                    return 100 * width / 750;
+                });
+            }
+        }
+        size();
+        $(window).resize(function () {
+            size();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="contact container">
+        <div class="content">
+            <h4>联系我们</h4>
+            <div class="line">
+                <b class="title"><i></i>联系电话</b>
+                <p>新西兰：0064-36953268</p>
+                <p>中国大陆：400-0092727</p>
+            </div>
+            <div class="line line-2">
+                <b class="title"><i></i>亚太区总部</b>
+                <p>32/F, Main Building 1 Queen's Road<br/>Central Hong Kong</p>
+            </div>
+            <div class="line line-3">
+                <b class="title"><i></i>邮箱地址</b>
+                <p>客户服务：info@vefx.com</p>
+                <p>公共服务：pr@vefx.com</p>
+                <p>投诉建议：compliance@vefx.com</p>
+            </div>
+            <div class="line line-4 clearfix">
+                <b class="title">社交网络</b>
+                <span class="link-1"></span>
+                <span class="link-2"></span>
+                <span class="link-3"></span>
+                <span class="link-4"></span>
+            </div>
+            <div class="line line-5">
+                <b class="title">意见建议</b>
+                <p>请输入您的详细信息，我们的代表将尽快<br/>与您联系。</p>
+                <div class="form-box">
+                    <input type="text" name="" id="name" placeholder="姓名">
+                    <input type="text" name="" id="email" placeholder="邮箱">
+                    <input type="text" name="" id="phone" placeholder="电话">
+                    <input type="text" name="" id="wq" placeholder="微信/QQ">
+                    <textarea name="" id="opinion" cols="30" rows="10" style="resize:none;" placeholder="意见内容"></textarea>
+                    <a href="javascript:;" class="submit-a">提交</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("./common/header.html")
+        $("#footer").load("./common/footer.html")
+        $("#name").on('blur input propertychange', function () {
+            var re = /^[\u4E00-\u9FA5]+$/;
+            if ($(this).val() == '') {
+                $(this).addClass("warning");
+                console.log($(this).val())
+                // alert("姓名不能为空");
+                return false;
+            } else if (!re.test($(this).val())) {
+                $(this).addClass("warning");
+                // alert("姓名不正确");
+                return false;
+            } else {
+                $(this).removeClass("warning");
+                return true;
+            }
+        });
+        $("#email").on('blur input propertychange', function () {
+            var re = /^[a-zA-Z0-9_-]+@([a-zA-Z0-9]+\.)+(com|cn|net|org)$/;
+            if ($(this).val() == '') {
+                $(this).addClass("warning");
+                // alert("邮箱不能为空");
+                return false;
+            } else if (!re.test($(this).val())) {
+                $(this).addClass("warning");
+                // alert("邮箱不正确");
+                return false;
+            } else {
+                $(this).removeClass("warning");
+                return true;
+            }
+        })
+        $("#phone").on('blur input propertychange', function () {
+            var re = /^[1][3,4,5,7,8][0-9]{9}$/;
+            if ($(this).val() == '') {
+                $(this).addClass("warning");
+                return false;
+                // if($("#wq input").val() == '') {
+                //     $(this).addClass("warning");
+                //     $("#wq").addClass("warning");
+                //     alert("电话和微信至少一个不能为空");
+                //     return false;
+                // }
+            } else if (!re.test($(this).val())) {
+                $(this).addClass("warning");
+                // alert("电话不正确");
+                return false;
+            } else {
+                $(this).removeClass("warning");
+                return true;
+            }
+        })
+        $("#wq").on('blur input propertychange', function () {
+            if ($(this).val() == '') {
+                $(this).addClass("warning");
+                return false;
+                // if ($("#phone input").val() == '') {
+                //     $("#phone").addClass("warning");
+                //     $(this).addClass("warning");
+                //     alert("电话和微信至少一个不能为空");
+                //     return false;
+                // }
+            } else {
+                $(this).removeClass("warning");
+                return true;
+            }
+        })
+        $("#opinion").on('blur input propertychange', function () {
+            if ($(this).text() == '') {
+                $(this).addClass("warning");
+                // alert("意见内容不能为空");
+                return false;
+            } else {
+                $(this).removeClass("warning");
+                return true;
+            }
+        })
+
+        $(".submit-a").click(checkAll);
+
+        function checkAll() {
+            $(".form-box input").trigger("blur");
+            $(".form-box textarea").trigger("blur");
+            if($(".form-box input").hasClass("warning") || $(".form-box textarea").hasClass("warning")) {
+                alert("请确认表单信息");
+                return false;
+            } else {
+                alert("success");
+            }
+        }
+    </script>
+
+</body>
+
+</html>

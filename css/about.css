@@ -142,3 +142,141 @@ body {
     background-color: #fff;
     margin-left: .56rem;
 }
+
+.contact {
+    background-color: #2b2c30;
+    padding-top: .6rem;
+    color: #fff;
+}
+
+.contact h4 {
+    font-size: .36rem;
+    text-indent: .2rem;
+    font-weight: bold;
+}
+
+.contact .line {
+    padding: .36rem .2rem;
+    box-sizing: border-box;
+    border-bottom: 0.01rem solid #383a3f;
+}
+
+.contact .line .title {
+    font-size: .32rem;
+    margin-bottom: .54rem;
+    display: block;
+}
+
+.contact .line .title i {
+    width: .47rem;
+    height: .44rem;
+    display: inline-block;
+    margin-right: .24rem;
+    vertical-align: -0.08rem;
+    background: url(/images/about/contact_icon.png) 0 0 no-repeat;
+    background-size: 6.1rem .44rem;
+}
+
+.contact .line.line-2 .title i {
+    width: .35rem;
+    background-position-x: -1rem;
+}
+.contact .line.line-3 .title i {
+    width: .41rem;
+    background-position-x: -1.91rem;
+}
+/* .contact .line.line-4 .title i {
+    background-position-x: -1rem;
+} */
+
+.contact .line p {
+    font-size: .26rem;
+}
+
+.contact .line p:not(:first-of-type) {
+    margin-top: .28rem;
+}
+
+.contact .line.line-2 p,
+.contact .line.line-5 p {
+    font-size: .28rem;
+    line-height: .5rem;
+}
+
+.contact .line.line-4 .title {
+    float: left;
+    margin-right: .62rem;
+}
+
+.contact .line.line-4 span {
+    width: .44rem;
+    height: .44rem;
+    background: url(/images/about/contact_icon.png) -2.84rem 0 no-repeat;
+    background-size: 6.1rem .44rem;
+    float: left;
+    margin-right: .27rem;
+}
+
+.contact .line.line-4 span.link-2 {
+    background-position-x: -3.78rem
+}
+.contact .line.line-4 span.link-3 {
+    width: .52rem;
+    background-position-x: -4.68rem
+}
+.contact .line.line-4 span.link-4 {
+    background-position-x: -5.66rem
+}
+
+.contact .line .form-box {
+    margin-top: .37rem;
+}
+
+.contact .line .form-box input,
+.contact .line .form-box textarea {
+    width: 100%;
+    height: .76rem;
+    border: 0.01rem solid #44434a;
+    background-color: #27262c;
+    margin-bottom: .34rem;
+    padding-left: .27rem;
+    box-sizing: border-box;
+    font-size: .28rem;
+    color: #fff;
+}
+
+.contact .line .form-box textarea {
+    height: 2.8rem;
+    padding: .27rem;
+    outline: none;
+}
+
+.contact .line .form-box input::-webkit-input-placeholder,
+.contact .line .form-box textarea::-webkit-input-placeholder {
+    color: #ddd;
+    font-size: .28rem;
+}
+
+.contact .line .form-box input.warning,
+.contact .line .form-box textarea.warning {
+    border-color: #df4425;
+}
+
+.contact .line .form-box .submit-a {
+    width: 2.15rem;
+    height: .68rem;
+    display: block;
+    font-size: .28rem;
+    color: #fff;
+    line-height: .68rem;
+    border-radius: .04rem;
+    -webkit-border-radius: .04rem;
+    -moz-border-radius: .04rem;
+    -ms-border-radius: .04rem;
+    -o-border-radius: .04rem;
+    background:#bc3326; /* 一些不支持背景渐变的浏览器 */  
+    background:-moz-linear-gradient(left, #bc3326, #df4425);  
+    background:-webkit-gradient(linear,left 0, right 0, from(#bc3326), to(#df4425));  
+    background:-o-linear-gradient(left, #bc3326, #df4425);
+    text-align: center;
+}

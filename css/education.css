@@ -174,6 +174,9 @@ body {
 }
 
 /* question */
+.question {
+    background-color: #2b2c30;
+}
 .question .question-nav {
     height: 1.1rem;
     background-color: #1e1d22;
@@ -211,4 +214,188 @@ body {
     position: absolute;
     bottom: -.15rem;
     left: 0.65rem;
+}
+
+.question .question-content ul {
+    padding: .5rem 0 .37rem;
+    display: none;
+}
+
+.question .question-content ul:first-child {
+    display: block;
+}
+
+.question .question-content ul li {
+    background-color: #27262c;
+    margin-bottom: .2rem;
+    padding: .26rem .82rem .38rem .3rem;
+    box-sizing: border-box;
+    position: relative;
+    max-height: 1.02rem;
+    overflow: hidden;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    border: 0.01rem solid #27262c;
+}
+
+.question .question-content ul li.active {
+    border-color: #dd4425;
+    max-height: 5rem;
+}
+
+.question .question-content ul li i {
+    display: inline-block;
+    position: absolute;
+    top: .25rem;
+    right: .3rem;
+    width: .3rem;
+    height: .3rem;
+    min-width: .1rem; 
+    max-width: .3rem;
+    max-height: .3rem;
+}
+
+.question .question-content ul li i div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform 0.6s cubic-bezier(.4,0,0,1) 0.2s;
+    width: .15rem;
+    height: .15rem;
+    transform: translate3d(-75%,-50%,0) rotate(45deg);
+    -webkit-transform: translate3d(-75%,-50%,0) rotate(45deg);
+    -moz-transform: translate3d(-75%,-50%,0) rotate(45deg);
+    -ms-transform: translate3d(-75%,-50%,0) rotate(45deg);
+    -o-transform: translate3d(-75%,-50%,0) rotate(45deg);
+}
+
+.question .question-content ul li i span {
+    background: #df4425;
+    position: absolute;
+}
+.question .question-content ul li i span:nth-of-type(odd) {
+    width: .02rem;
+    top: 0;
+    bottom: 0;
+}
+.question .question-content ul li i span:nth-of-type(even) {
+    height: .02rem;
+    left: 0;
+    right: 0;
+}
+.question .question-content ul li i span:nth-of-type(1) {
+    right: 0;
+    transform-origin: bottom;
+    transition: transform 0.3s cubic-bezier(.1,.5,.2,1) 0.4s;
+}
+.question .question-content ul li i span:nth-of-type(2) {
+    bottom: 0;
+    transform-origin: left;
+    transition: transform 0.15s linear 0.3s; 
+}
+.question .question-content ul li i span:nth-of-type(3) {
+    left: 0;
+    transform-origin: bottom;
+    transform: scale3d(1,0,1);
+    transition: transform 0.15s linear 0.3s;
+}
+.question .question-content ul li i span:nth-of-type(4) {
+    top: 0;
+    transform-origin: left;
+    transform: scale3d(0,1,1);
+    transition: transform 0.2s cubic-bezier(.69,0,.94,1); 
+}
+.question .question-content ul li.active div {
+    transform: translate3d(-25%,-50%,0) rotate(45deg);
+    -webkit-transform: translate3d(-25%,-50%,0) rotate(45deg);
+    -moz-transform: translate3d(-25%,-50%,0) rotate(45deg);
+    -ms-transform: translate3d(-25%,-50%,0) rotate(45deg);
+    -o-transform: translate3d(-25%,-50%,0) rotate(45deg);
+}
+.question .question-content ul li.active i span:nth-of-type(1) {
+    transform-origin: top;
+    transform: scale3d(1,0,1);
+    transition: transform 0.15s linear 0.3s;
+}
+.question .question-content ul li.active i span:nth-of-type(2) {
+    transform-origin: right;
+    transform: scale3d(0,1,1);
+    transition: transform 0.2s cubic-bezier(.69,0,.94,1);
+}
+.question .question-content ul li.active i span:nth-of-type(3) {
+    transform-origin: top;
+    transform: scale3d(1,1,1);
+    transition: transform 0.3s cubic-bezier(.1,.5,.2,1) 0.4s;
+}
+.question .question-content ul li.active i span:nth-of-type(4) {
+    transform-origin: right;
+    transform: scale3d(1,1,1);
+    transition: transform 0.15s linear 0.3s;
+}
+.question .question-content ul li p {
+    font-size: .3rem;
+    color: #fff;
+}
+.question .question-content ul li p:first-of-type {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+.question .question-content ul li.active p:first-of-type {
+    white-space: initial;
+}
+
+.question .question-content ul li.active p:first-of-type,
+.question .question-content ul li p:first-of-type span {
+    color: #df4425;
+}
+.question .question-content ul li p:last-of-type {
+    font-size: .28rem;
+    margin-top: .3rem;
+    line-height: .5rem;
+    display: none;
+}
+.question .question-content ul li.active p:last-of-type {
+    display: block;
+}
+.b6 {
+    /* margin-top: .87rem; */
+    height: 2.6rem;
+    background: url(/images/about/b6_bg.jpg) no-repeat center;
+    background-size: contain;
+    padding: .33rem 0 .57rem;
+    box-sizing: border-box;
+    text-align: center;
+}
+.b6 span {
+    font-size: .3rem;
+    color: #fff;
+    margin-bottom: .7rem;
+    display: block;
+}
+
+.b6 a {
+    width: 2rem;
+    height: .7rem;
+    border-radius: .04rem;
+    -webkit-border-radius: .04rem;
+    -moz-border-radius: .04rem;
+    -ms-border-radius: .04rem;
+    -o-border-radius: .04rem;
+    border: 1px solid #fff;
+    font-size: .26rem;
+    line-height: .7rem;
+    display: inline-block;
+}
+.b6 a.download-a {
+    color: #fff;
+}
+.b6 a.register-a {
+    color: #191818;
+    background-color: #fff;
+    margin-left: .56rem;
 }

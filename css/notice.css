@@ -1,0 +1,122 @@
+.notice {
+    background-color: #f0f0f0;
+    padding-top: .22rem;
+}
+
+.notice .list-box {
+    background-color: #fff;
+    padding-top: .38rem;
+}
+
+.notice .list-box h4 {
+    font-size: .32rem;
+    color: #151515;
+    font-weight: bold;
+    margin-bottom: .38rem;
+}
+
+.notice .list-box h4 i {
+    width: .05rem;
+    height: .26rem;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #dd4425;
+    margin: 0 .22rem;
+}
+
+.notice .list-box ul {
+    padding: 0 .12rem;
+    box-sizing: border-box;
+}
+
+.notice .list-box ul li {
+    height: .98rem;
+    padding: 0 .12rem;
+    box-sizing: border-box;
+    border-bottom: 0.01rem solid #e5e5e5;
+}
+
+.notice .list-box ul li a {
+    width: 100%;
+    line-height: .98rem;
+    font-size: .3rem;
+    color: #333;
+    display: block;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.notice .list-box ul li b {
+    color: #dd4425;
+    border-right: .22rem;
+}
+
+.notice .con-box {
+    background-color: #fff;
+    position: relative;
+    padding: .63rem .55rem .72rem .44rem;
+    box-sizing: border-box;
+}
+
+.notice .con-box .con-i {
+    width: 1.43rem;
+    height: .5rem;
+    display: block;
+    position: absolute;
+    top: -0.09rem;
+    left: .43rem;
+    background: url(/images/notice_con.png) no-repeat center;
+    background-size: contain;
+}
+
+.notice .con-box .title-box {
+    padding-bottom: .23rem;
+    border-bottom: 0.01rem solid #eee;
+}
+
+.notice .con-box .title-box h4 {
+    font-size: .38rem;
+    line-height: .66rem;
+    color: #151515;
+    font-weight: bold;
+}
+
+.notice .con-box .title-box p {
+    font-size: .24rem;
+    color: #666;
+    text-align: right;
+}
+
+.notice .con-box .content-box {
+    padding: .18rem 0 .54rem;
+    margin-bottom: .43rem;
+    border-bottom: 0.01rem dashed #aaa;
+}
+
+.notice .con-box .content-box p {
+    font-size: .32rem;
+    color: #333;
+    line-height: .56rem;
+}
+
+.notice .btn-box a {
+    font-size: .28rem;
+    color: #333;
+}
+
+.notice .btn-box p {
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.notice .btn-box p:last-child {
+    margin-top: .54rem;
+}
+
+.notice .btn-box p span {
+    width: 1.13rem;
+    margin-left: .13rem;
+    display: inline-block;
+}

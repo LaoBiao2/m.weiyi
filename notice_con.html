@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="telephone=no" name="format-detection" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/notice.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script><script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        function size() {
+            var width = $(window).width();
+            if (width > 750) {
+                $('html').css('font-size', function () {
+                    return 100;
+                });
+                return;
+            } else {
+                $('html').css('font-size', function () {
+                    return 100 * width / 750;
+                });
+            }
+        }
+        size();
+        $(window).resize(function () {
+            size();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="notice container">
+        <div class="con-box content">
+            <i class="con-i"></i>
+            <div class="title-box">
+                <h4>關於金盛金融端午節假期取款安排通知</h4>
+                <p>2018-06-04 </p>
+            </div>
+            <div class="content-box">
+                <p>尊敬的金盛用戶：
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;您們好！由於端午假期將至，因應國內銀行假期，本公司取款服務時間將作出以下調整：
+                <br/>取款暫停服務時間：2018年06月15日15:00至2018年06月18日
+                <br/>取款恢復服務時間：2018年06月19日早上09:00。
+                <br/>敬請客戶留意上述安排。假期期間入金業務正常辦理。如有任何疑問，
+                <br/>請撥打服務熱線或者諮詢線上客服，感謝大家一直對金盛的支持與厚愛！並祝交易愉快！
+                <br/>服務熱線：400-009-2727
+                <br/>溫馨提示：假期期間國際交易市場正常運行，敬請各客戶留意資金管理，如有需要，應儘早安排匯款。</p>
+            </div>
+            <div class="btn-box">
+                <p><a href="javascript:;"><span>上一篇：</span>关于美国独立日放不放假的通知.</a></p>
+                <p><a href="javascript:;"><span>下一篇：</span>关于中国大陆地区国庆期间出金安排...</a></p>
+            </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("./common/header.html")
+        $("#footer").load("./common/footer.html")
+    </script>
+
+</body>
+
+</html>
