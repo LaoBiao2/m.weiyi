@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta content="telephone=no" name="format-detection" />
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/education.css" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script><script src="/js/jquery-1.9.1.min.js"></script>
+    <script src="/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        function size() {
+            var width = $(window).width();
+            if (width > 750) {
+                $('html').css('font-size', function () {
+                    return 100;
+                });
+                return;
+            } else {
+                $('html').css('font-size', function () {
+                    return 100 * width / 750;
+                });
+            }
+        }
+        size();
+        $(window).resize(function () {
+            size();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="question container">
+        <div class="question-nav">
+            <ul class="content">
+                <li class="active">交易问题</li>
+                <li>专家点评</li>
+                <li>经济数据</li>
+                <li>投行观点</li>
+                <i></i>
+            </ul>
+        </div>
+        
+        <div class="slider-content">
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <b>黄金期货交易入门-不懂这几点麻烦就大了</b>
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <b>伦敦金是现货黄金吗？为什么现货黄金叫伦敦金</b>
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <b>黄金期货交易入门-不懂这几点麻烦就大了</b>
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <b>伦敦金是现货黄金吗？为什么现货黄金叫伦敦金</b>
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <b>黄金期货交易入门-不懂这几点麻烦就大了</b>
+                        <i></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <b>伦敦金是现货黄金吗？为什么现货黄金叫伦敦金</b>
+                        <i></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="loading">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        $("#header").load("./common/header.html")
+        $("#footer").load("./common/footer.html")
+        $(function () {
+            var knowSwiper = new Swiper('.slider-know.swiper-container', {
+                // loop: true,
+                slidesPerView: 'auto',
+                spaceBetween: 30
+            });
+        })
+        $(".question-nav ul li").click(function () {
+            var liindex = $('question-nav ul li').index(this);
+            $(this).addClass('active').siblings().removeClass('active');
+            var liWidth = $('question-nav ul li').innerWidth();
+            $('question-nav ul i').stop(false,true).animate({'left' : (liindex * liWidth + 0.65) + 'rem'},300);
+            console.log(liindex)
+            // $(".b3 .b3-top .right-div .nav-txt").find(".txt-box").eq($(this).index()).fadeIn().siblings().hide();
+        })
+    </script>
+
+</body>
+
+</html>
