@@ -48,7 +48,7 @@ body {
     width: .95rem;
     height: 1.03rem;
     margin: .15rem auto .01rem;
-    background: url(../images/education/knowledge_icon.png) 0 0 no-repeat;
+    background: url(../images/knowledge_icon.png) 0 0 no-repeat;
     background-size: 9.11rem 2.55rem;
 }
 
@@ -110,7 +110,7 @@ body {
     width: .17rem;
     height: .28rem;
     display: inline-block;
-    background: url(/images/education/knowledge_icon.png) -8.94rem -.38rem no-repeat;
+    background: url(/images/knowledge_icon.png) -8.94rem -.38rem no-repeat;
     background-size: 9.11rem 2.55rem;
 }
 

@@ -48,7 +48,7 @@ body {
     width: 1.23rem;
     height: .8rem;
     margin: .14rem auto .25rem;
-    background: url(../images/trade/product_icon.png) 0 0 no-repeat;
+    background: url(../images/product_icon.png) 0 0 no-repeat;
     background-size: 9.2rem 7.27rem;
 }
 
@@ -150,7 +150,7 @@ body {
     display: inline-block;
     vertical-align: middle;
     margin-right: .4rem;
-    background: url(../images/trade/product_icon.png) 0 -3.68rem no-repeat;
+    background: url(../images/product_icon.png) 0 -3.68rem no-repeat;
     background-size: 9.2rem 7.27rem;
 }
 
